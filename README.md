@@ -17,5 +17,6 @@
 ### Projects
 
 - [Accordion](https://github.com/kmseunh/svelte-projects/tree/main/accordion)
+- [Image Slider](https://github.com/kmseunh/svelte-projects/tree/main/svelte-image-slider)
 - [Random Color Generator](https://github.com/kmseunh/svelte-projects/tree/main/random-color-generator)
 - [Star Rating](https://github.com/kmseunh/svelte-projects/tree/main/svelte-star-rating)
