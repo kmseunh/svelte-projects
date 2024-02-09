@@ -18,3 +18,4 @@
 
 - [Accordion](https://github.com/kmseunh/svelte-projects/tree/main/accordion)
 - [Random Color Generator](https://github.com/kmseunh/svelte-projects/tree/main/random-color-generator)
+- [Star Rating](https://github.com/kmseunh/svelte-projects/tree/main/svelte-star-rating)
