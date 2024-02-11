@@ -19,6 +19,7 @@
 - [Accordion](https://github.com/kmseunh/svelte-projects/tree/main/accordion)
 - [Image Slider](https://github.com/kmseunh/svelte-projects/tree/main/svelte-image-slider)
 - [Load More App](https://github.com/kmseunh/svelte-projects/tree/main/svelte-load-more-app)
+- [QR Code Generator](https://github.com/kmseunh/svelte-projects/tree/main/svelte-qr-code-generator)
 - [Random Color Generator](https://github.com/kmseunh/svelte-projects/tree/main/random-color-generator)
 - [Star Rating](https://github.com/kmseunh/svelte-projects/tree/main/svelte-star-rating)
 - [Tree View](https://github.com/kmseunh/svelte-projects/tree/main/svelte-tree-view)
