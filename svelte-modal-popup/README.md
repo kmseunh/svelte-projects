@@ -1,4 +1,4 @@
-# svelte-tabs
+# svelte-modal-popup
 
 ## 💬 설명
 
