@@ -20,6 +20,7 @@
 - [Image Slider](https://github.com/kmseunh/svelte-projects/tree/main/svelte-image-slider)
 - [Light Dark Mode](https://github.com/kmseunh/svelte-projects/tree/main/svelte-light-dark-mode)
 - [Load More App](https://github.com/kmseunh/svelte-projects/tree/main/svelte-load-more-app)
+- [Modal Popup](https://github.com/kmseunh/svelte-projects/tree/main/svelte-modal-popup)
 - [QR Code Generator](https://github.com/kmseunh/svelte-projects/tree/main/svelte-qr-code-generator)
 - [Random Color Generator](https://github.com/kmseunh/svelte-projects/tree/main/random-color-generator)
 - [Scroll Indicator](https://github.com/kmseunh/svelte-projects/tree/main/svelte-scroll-indicator)
