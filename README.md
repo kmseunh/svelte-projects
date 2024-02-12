@@ -24,4 +24,5 @@
 - [Random Color Generator](https://github.com/kmseunh/svelte-projects/tree/main/random-color-generator)
 - [Scroll Indicator](https://github.com/kmseunh/svelte-projects/tree/main/svelte-scroll-indicator)
 - [Star Rating](https://github.com/kmseunh/svelte-projects/tree/main/svelte-star-rating)
+- [Tabs](https://github.com/kmseunh/svelte-projects/tree/main/svelte-tabs)
 - [Tree View](https://github.com/kmseunh/svelte-projects/tree/main/svelte-tree-view)
