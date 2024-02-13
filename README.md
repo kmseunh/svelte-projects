@@ -17,6 +17,7 @@
 ### Projects
 
 - [Accordion](https://github.com/kmseunh/svelte-projects/tree/main/accordion)
+- [Github Profile Finder](https://github.com/kmseunh/svelte-projects/tree/main/svelte-github-profile-finder)
 - [Image Slider](https://github.com/kmseunh/svelte-projects/tree/main/svelte-image-slider)
 - [Light Dark Mode](https://github.com/kmseunh/svelte-projects/tree/main/svelte-light-dark-mode)
 - [Load More App](https://github.com/kmseunh/svelte-projects/tree/main/svelte-load-more-app)
