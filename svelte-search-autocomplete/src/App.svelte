@@ -4,7 +4,6 @@
     import PokemonDetails from './components/PokemonDetails.svelte';
 
     const API_URL: string = 'https://pokeapi.co/api/v2/pokemon';
-    const MAX_POKEMON_LIMIT: number = 1000;
 
     let pokemonDetails: any;
 
