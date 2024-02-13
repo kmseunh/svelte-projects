@@ -1,5 +1,6 @@
 <script lang="ts">
     export let pokemonDetails: any;
+</script>
 
 {#if pokemonDetails}
     <div class="mt-8 flex flex-col items-center">

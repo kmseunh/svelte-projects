@@ -1,5 +1,5 @@
 <script lang="ts">
-    import axios, { AxiosResponse } from 'axios';
+    import axios from 'axios';
     import Search from './components/Search.svelte';
     import PokemonDetails from './components/PokemonDetails.svelte';
 
@@ -10,9 +10,7 @@
 
     const fetchPokemonDetails = async (name: string): Promise<void> => {
         try {
-            const response: AxiosResponse = await axios.get(
-                `${API_URL}/${name}`
-            );
+            const response = await axios.get(`${API_URL}/${name}`);
             pokemonDetails = response.data;
         } catch (error) {
             console.error('Error fetching Pokemon details:', error);

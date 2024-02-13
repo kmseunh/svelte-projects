@@ -1,5 +1,5 @@
 <script lang="ts">
-    import axios, { AxiosResponse } from 'axios';
+    import axios from 'axios';
     import { onMount } from 'svelte';
     import SuggestionList from './SuggestionList.svelte';
 
@@ -14,7 +14,7 @@
 
     const fetchPokemonList = async (): Promise<string[]> => {
         try {
-            const response: AxiosResponse = await axios.get(
+            const response = await axios.get(
                 `${API_URL}?limit=${MAX_POKEMON_LIMIT}`
             );
             return response.data.results.map(
