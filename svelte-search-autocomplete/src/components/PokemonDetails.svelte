@@ -1,4 +1,3 @@
-<!-- PokemonDetails.svelte -->
 <script>
     export let pokemonDetails;
 </script>

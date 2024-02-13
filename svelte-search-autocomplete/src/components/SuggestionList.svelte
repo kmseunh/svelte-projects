@@ -1,4 +1,3 @@
-<!-- SuggestionsList.svelte -->
 <script>
     export let suggestions = [];
     export let showSuggestions = false;
