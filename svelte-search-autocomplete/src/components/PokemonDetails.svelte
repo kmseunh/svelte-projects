@@ -1,6 +1,5 @@
 <script lang="ts">
-    export let pokemonDetails: any; // 이 부분에서 any 대신에 실제 PokemonDetails의 타입을 사용하는 것이 좋습니다.
-</script>
+    export let pokemonDetails: any;
 
 {#if pokemonDetails}
     <div class="mt-8 flex flex-col items-center">
