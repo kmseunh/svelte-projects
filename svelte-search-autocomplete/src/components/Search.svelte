@@ -1,32 +1,35 @@
-<script>
-    import axios from 'axios';
+<script lang="ts">
+    import axios, { AxiosResponse } from 'axios';
     import { onMount } from 'svelte';
+    import SuggestionList from './SuggestionList.svelte';
 
-    const API_URL = 'https://pokeapi.co/api/v2/pokemon';
-    const MAX_POKEMON_LIMIT = 1000;
+    const API_URL: string = 'https://pokeapi.co/api/v2/pokemon';
+    const MAX_POKEMON_LIMIT: number = 1000;
 
-    export let pokemonDetails;
+    export let pokemonDetails: any;
 
-    let query = '';
-    let suggestions = [];
-    let showSuggestions = false;
+    let query: string = '';
+    let suggestions: string[] = [];
+    let showSuggestions: boolean = false;
 
-    const fetchPokemonList = async () => {
+    const fetchPokemonList = async (): Promise<string[]> => {
         try {
-            const response = await axios.get(
+            const response: AxiosResponse = await axios.get(
                 `${API_URL}?limit=${MAX_POKEMON_LIMIT}`
             );
-            return response.data.results.map((pokemon) => pokemon.name);
+            return response.data.results.map(
+                (pokemon: { name: string }) => pokemon.name
+            );
         } catch (error) {
             console.error('Error fetching data:', error);
             return [];
         }
     };
 
-    const search = async () => {
+    const search = async (): Promise<void> => {
         query = query.trim().toLowerCase();
         if (query !== '') {
-            suggestions = (await fetchPokemonList()).filter((pokemon) =>
+            suggestions = (await fetchPokemonList()).filter((pokemon: string) =>
                 pokemon.startsWith(query)
             );
             showSuggestions = true;
@@ -36,9 +39,9 @@
         }
     };
 
-    const handleClickOutside = (event) => {
-        const input = document.querySelector('input');
-        if (input && !input.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent): void => {
+        const input: Element | null = document.querySelector('input');
+        if (input && !input.contains(event.target as Node)) {
             showSuggestions = false;
         }
     };
@@ -47,15 +50,17 @@
         document.addEventListener('click', handleClickOutside);
     });
 
-    const handleSearch = () => {
+    const handleSearch = (): void => {
         if (query.trim() !== '') {
             getPokemonDetails(query);
         }
     };
 
-    const getPokemonDetails = async (name) => {
+    const getPokemonDetails = async (name: string): Promise<void> => {
         try {
-            const response = await axios.get(`${API_URL}/${name}`);
+            const response: AxiosResponse = await axios.get(
+                `${API_URL}/${name}`
+            );
             pokemonDetails = response.data;
         } catch (error) {
             console.error('Error fetching Pokemon details:', error);
@@ -63,7 +68,7 @@
         }
     };
 
-    const handleSuggestionClick = (suggestion) => {
+    const handleSuggestionClick = (suggestion: string): void => {
         query = suggestion;
         showSuggestions = false;
         getPokemonDetails(query);
@@ -83,33 +88,9 @@
         on:click={handleSearch}>Search</button
     >
 
-    {#if showSuggestions && suggestions.length > 0}
-        <ul
-            class="absolute w-64 mt-2 overflow-y-auto max-h-48 bg-white border border-gray-200 rounded-md shadow-md z-20"
-        >
-            {#each suggestions as suggestion}
-                <li
-                    class="cursor-pointer py-2 px-4 hover:bg-gray-100"
-                    on:click={() => handleSuggestionClick(suggestion)}
-                >
-                    {suggestion}
-                </li>
-            {/each}
-        </ul>
-    {/if}
+    <SuggestionList
+        show={showSuggestions}
+        {suggestions}
+        {handleSuggestionClick}
+    />
 </div>
-
-{#if pokemonDetails}
-    <div class="mt-8 flex flex-col items-center">
-        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-4">{pokemonDetails.name}</h2>
-            <img
-                src={pokemonDetails.sprites.front_default}
-                alt={pokemonDetails.name}
-                class="w-40 h-40 mb-4"
-            />
-            <p class="text-lg">Height: {pokemonDetails.height}</p>
-            <p class="text-lg">Weight: {pokemonDetails.weight}</p>
-        </div>
-    </div>
-{/if}
