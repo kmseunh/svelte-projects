@@ -1,4 +1,4 @@
-# svelte-github-Profile-Finder
+# svelte-github-profile-finder
 
 ## 💬 설명
 
