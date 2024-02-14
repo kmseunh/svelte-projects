@@ -21,6 +21,7 @@
 - [Image Slider](https://github.com/kmseunh/svelte-projects/tree/main/svelte-image-slider)
 - [Light Dark Mode](https://github.com/kmseunh/svelte-projects/tree/main/svelte-light-dark-mode)
 - [Load More App](https://github.com/kmseunh/svelte-projects/tree/main/svelte-load-more-app)
+- [Memory Game](https://github.com/kmseunh/svelte-projects/tree/main/svelte-memory-game)
 - [Modal Popup](https://github.com/kmseunh/svelte-projects/tree/main/svelte-modal-popup)
 - [Password Generator](https://github.com/kmseunh/svelte-projects/tree/main/svelte-password-generator)
 - [QR Code Generator](https://github.com/kmseunh/svelte-projects/tree/main/svelte-qr-code-generator)
