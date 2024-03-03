@@ -1,10 +1,10 @@
 # svelte-projects
 
-> Svelte: cybernetically enhanced web apps
+> Cybernetically enhanced web apps
 
 <br>
 
-**Svelete**를 사용하여 만든 간단한 프로젝트 저장소입니다.
+**Svelte**를 사용하여 만든 간단한 프로젝트 저장소입니다.
 
 &nbsp;
 
